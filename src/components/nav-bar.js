@@ -1,19 +1,26 @@
 import React from "react";
-
+import { Navbar } from "react-bootstrap";
 import MainNav from "./main-nav";
 import AuthNav from "./auth-nav";
 
 const NavBar = () => {
   return (
-    <div className="nav-container mb-3">
-      <nav className="navbar navbar-expand-md navbar-light bg-light">
-        <div className="container">
-          <div className="navbar-brand logo" />
+    <>
+      <Navbar
+        bg="custom dark"
+        variant="dark"
+        expand="lg"
+        style={{ backgroundColor: "rgb(14, 14, 14)" }}
+      >
+        <Navbar.Brand href="/">Team Rocket</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <MainNav />
           <AuthNav />
-        </div>
-      </nav>
-    </div>
+        </Navbar.Collapse>
+      </Navbar>
+      <br />
+    </>
   );
 };
 

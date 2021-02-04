@@ -1,10 +1,13 @@
 import React from "react";
 import AuthenticationButton from "./authentication-button";
+import { Form } from "react-bootstrap";
 
 const AuthNav = () => (
-  <div className="navbar-nav ml-auto">
-    <AuthenticationButton />
-  </div>
+  <>
+    <Form inline>
+      <AuthenticationButton />
+    </Form>
+  </>
 );
 
 export default AuthNav;

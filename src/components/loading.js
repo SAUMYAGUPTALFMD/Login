@@ -1,10 +1,11 @@
 import React from "react";
-const loadingImg =
-  "https://cdn.auth0.com/blog/auth0-react-sample/assets/loading.svg";
+import UseAnimations from "react-useanimations";
+import Infinity from "react-useanimations/lib/infinity";
+import '../css/blackBody.css'
 
 const Loading = () => (
-  <div className="spinner">
-    <img src={loadingImg} alt="Loading..." />
+  <div className='loadContainer'>
+    <UseAnimations className='loader' animation={Infinity} size={150} speed={0.5} />
   </div>
 );
 
